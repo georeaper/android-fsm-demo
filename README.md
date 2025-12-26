@@ -80,7 +80,7 @@ ViewModel-driven UI
 Scalable structure suitable for real backend & synchronization logic
 
 ## 🛠 Technologies Used
-
+```text
 Kotlin
 
 Android SDK
@@ -94,13 +94,13 @@ MVVM + Clean Architecture
 RecyclerView
 
 LiveData / StateFlow (where applicable)
-
-How to Run
-
+```
+##How to Run
+```text
 Clone the repository:
 
 git clone https://github.com/georeaper/android-fsm-demo.git
-
+```
 
 Open the project in Android Studio
 
