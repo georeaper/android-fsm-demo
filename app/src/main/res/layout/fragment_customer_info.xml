@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:background="@drawable/background_round_corners_white_stroke"
+    android:backgroundTint="@color/BackgroundAppColor"
+
+    android:padding="16dp"
+    tools:context=".presentation.ui.WorkOrders.CustomerInfoFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+
+       >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/linearLayoutDates"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    >
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:hint="Date Created"
+        android:background="@drawable/background_round_corners_white_stroke"
+        android:backgroundTint="@color/white"
+        android:layout_margin="5dp"
+        android:id="@+id/fieldReportInfoDateCreatedLayout"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/customerInfoEditTextDateCreated"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:textSize="14sp"
+            android:inputType="none"
+            android:focusable="false"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/background_round_corners_white_stroke"
+        android:backgroundTint="@color/white"
+        android:layout_margin="5dp"
+        android:id="@+id/fieldReportInfoDateClosedLayout">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/customerInfoEditTextDateClosed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Date Closed"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:textSize="14sp"
+            android:inputType="none"
+            android:focusable="false"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>
+      <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/fieldReportInfoLinearLayoutHeader"
+
+            android:gravity="center"
+            >
+   <com.google.android.material.textfield.TextInputLayout
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:layout_weight="0.5"
+       android:background="@drawable/background_round_corners_white_stroke"
+       android:backgroundTint="@color/white"
+       android:layout_margin="5dp"
+       android:hint="Report Number"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense"
+       android:id="@+id/fieldReportInfoReportNumberLayout">
+
+       <com.google.android.material.textfield.TextInputEditText
+           android:id="@+id/customerInfoEditTextReportNumber"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:hint="Report Number"
+           android:gravity="center_vertical"
+           android:padding="10dp"
+           android:textSize="14sp"
+           android:inputType="none"
+           android:focusable="false" />
+   </com.google.android.material.textfield.TextInputLayout>
+   <LinearLayout
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:layout_weight="0.5">
+   </LinearLayout>
+
+</LinearLayout>
+
+
+      <com.google.android.material.textfield.TextInputLayout
+
+          android:id="@+id/fieldReportInfoCustomerNameLayout"
+          android:hint="Customer Name"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:layout_margin="5dp"
+          android:backgroundTint="@color/white"
+          android:background="@drawable/bordered_rectangle"
+          android:textSize="18sp"
+
+         >
+         <com.google.android.material.textview.MaterialTextView
+             android:id="@+id/customerInfoTextViewCustomerName"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:text="Customer Name"
+             android:textSize="15sp"
+             android:padding="10dp"
+             android:gravity="center"
+             style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense"/>
+
+      </com.google.android.material.textfield.TextInputLayout>
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/fieldReportInfoLayoutDepartmentLayout"
+          android:baselineAligned="false"
+          android:orientation="horizontal">
+         <com.google.android.material.textfield.TextInputLayout
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="0.5"
+             android:layout_margin="5dp"
+             android:layout_gravity="center"
+             android:backgroundTint="@color/white"
+             android:background="@drawable/bordered_rectangle"
+             android:hint="Department"
+             android:id="@+id/fieldReportInfoDepartmentLayout"
+
+             >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:padding="10dp"
+                android:gravity="center"
+                android:id="@+id/customerInfoEditTextDepartment"
+                />
+
+         </com.google.android.material.textfield.TextInputLayout>
+         <com.google.android.material.textfield.TextInputLayout
+             android:layout_width="0dp"
+             android:layout_weight="0.5"
+             android:layout_height="wrap_content"
+             android:hint="Report Type"
+             android:layout_margin="5dp"
+             android:backgroundTint="@color/white"
+             android:background="@drawable/bordered_rectangle"
+             android:id="@+id/fieldReportInfoReportTypeLayout"
+             style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+             >
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="15sp"
+                android:padding="10dp"
+                android:gravity="center"
+                android:id="@+id/customerInfoAutocompleteReportType"
+
+                />
+
+         </com.google.android.material.textfield.TextInputLayout>
+      </LinearLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:id="@+id/fieldReportInfoSubjectLayout"
+          android:layout_margin="5dp"
+          android:backgroundTint="@color/white"
+          android:background="@drawable/bordered_rectangle"
+          android:layout_gravity="center"
+
+         >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="15sp"
+            android:padding="10dp"
+            android:hint="Main Subject"
+            android:id="@+id/customerInfoEditTextMainSubject"/>
+
+     </com.google.android.material.textfield.TextInputLayout>
+      <com.google.android.material.textfield.TextInputLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/fieldReportInfoMainLayout"
+          android:layout_margin="5dp"
+          android:backgroundTint="@color/white"
+          android:background="@drawable/bordered_rectangle">
+         <com.google.android.material.textfield.TextInputEditText
+             android:id="@+id/customerInfoEditTextMainReport"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+
+             android:textSize="15sp"
+             android:padding="10dp"
+             android:lines="5"
+             android:hint="Main Report"/>
+
+      </com.google.android.material.textfield.TextInputLayout>
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/fieldReportInfoLinearLayoutSignature"
+          android:weightSum="2"
+          android:backgroundTint="@color/white"
+          android:background="@drawable/bordered_rectangle"
+          android:orientation="horizontal">
+         <com.google.android.material.textfield.TextInputLayout
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="1.5"
+             android:backgroundTint="@color/white"
+             android:layout_margin="5dp"
+             android:layout_gravity="center"
+             android:background="@drawable/bordered_rectangle"
+             android:id="@+id/fieldReportInfoContactNameLayout">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/customerInfoEditTextSigneeName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="15sp"
+                android:padding="10dp"
+                android:hint="Signee Name"/>
+
+
+         </com.google.android.material.textfield.TextInputLayout>
+         <ImageButton
+             android:id="@+id/customerInfoImageButtonSignature"
+             android:layout_width="0dp"
+             android:layout_gravity="end"
+             android:layout_height="wrap_content"
+             android:layout_weight="0.5"
+             android:contentDescription="imagebtn"
+             android:padding="10dp"
+
+             android:backgroundTint="@color/white"
+             android:background="@drawable/bordered_rectangle"
+             android:src="@drawable/document_sign40x40"/>
+
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:weightSum="2"
+          android:id="@+id/fieldReportInfoLinearFooter"
+         >
+         <ImageButton
+             android:id="@+id/customerInfoImageButtonPrintReport"
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+             android:layout_weight="1"
+             android:background="@null"
+
+             android:src="@drawable/print_icon40x40"/>
+
+         <ImageButton
+             android:id="@+id/customerInfoImageButtonSaveReport"
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+             android:layout_weight="1"
+             android:background="@null"
+
+             android:src="@drawable/save_icon40x40"
+             tools:ignore="ContentDescription" />
+          <Button
+              android:id="@+id/btn_create_equipment"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:backgroundTint="@color/color_dark_green"
+              android:elevation="8dp"
+
+              android:text="Save" />
+
+
+      </LinearLayout>
+
+
+   </LinearLayout>
+    </ScrollView>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="20dp"
+        android:importantForAccessibility="no"
+        android:padding="5dp"
+        android:id="@+id/btn_actions_work_orders_customer_info"
+
+        android:backgroundTint="@color/color_mint_green"
+        android:src="@drawable/actions_pointer_svgrepo_com"/>
+</FrameLayout>

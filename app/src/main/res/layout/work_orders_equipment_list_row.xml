@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/bordered_rectangle">
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:id="@+id/workOrderEquipmentListRowModel"
+        android:layout_weight="1"
+        android:text="N49ssasa"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14sp"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:id="@+id/workOrderEquipmentListRowSn"
+        android:layout_weight="1.4"
+        android:text="sne434343434334wa"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:textColor="@color/colorPrimary"/>
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/workOrderEquipmentListRowIMG"
+        android:layout_weight="0.3"
+        android:src="@drawable/completed_order_svgrepo_com"
+        android:padding="7dp"
+        android:layout_gravity="center"/>
+</LinearLayout>

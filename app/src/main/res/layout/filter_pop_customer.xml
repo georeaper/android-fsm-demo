@@ -1,0 +1,119 @@
+
+    <!-- res/layout/fragment_equipment_filter_bottom_sheet.xml -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:fillViewport="true">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="horizontal">
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/clearCustomerButton"
+
+            android:layout_width="0dp"
+            android:layout_weight=".25"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="Clear"
+
+            />
+        <TextView
+            android:id="@+id/filterTitle"
+            android:layout_width="0dp"
+            android:layout_weight=".5"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="Equipment Filter"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/applyCustomerButton"
+            android:layout_width="0dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight=".25"
+            android:layout_height="wrap_content"
+            android:text="Apply"
+
+
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Search"
+            style="@style/Widget.Material3.TextInputLayout.FilledBox.Dense"> <!-- Remove ExposedDropdownMenu -->
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/searchEditTextCustomer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:focusable="false"
+                android:cursorVisible="false"
+                android:backgroundTint="@android:color/transparent"
+                android:background="@color/white" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <!-- Customer Selection Section -->
+
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/radioGroupCustomer"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/radioCustomerButtonAll"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="All"
+            android:defaultFocusHighlightEnabled="true"/>
+        <RadioButton
+            android:id="@+id/radioCustomerButtonActive"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Active" />
+
+        <RadioButton
+            android:id="@+id/radioCustomerButtonDeactive"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Non Active" />
+
+
+    </RadioGroup>
+
+</LinearLayout>
+</ScrollView>
+

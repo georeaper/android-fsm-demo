@@ -1,0 +1,2123 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "fc5e9634dffc192c09f178492ee96301",
+    "entities": [
+      {
+        "tableName": "Customer",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`CustomerID` TEXT NOT NULL, `RemoteID` INTEGER, `Name` TEXT, `Phone` TEXT, `Email` TEXT, `Address` TEXT, `ZipCode` TEXT, `City` TEXT, `Notes` TEXT, `Description` TEXT, `CustomerStatus` INTEGER, `LastModified` TEXT, `DateCreated` TEXT, `Version` TEXT, PRIMARY KEY(`CustomerID`))",
+        "fields": [
+          {
+            "fieldPath": "CustomerID",
+            "columnName": "CustomerID",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "RemoteID",
+            "columnName": "RemoteID",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Name",
+            "columnName": "Name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Phone",
+            "columnName": "Phone",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Email",
+            "columnName": "Email",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Address",
+            "columnName": "Address",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "ZipCode",
+            "columnName": "ZipCode",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "City",
+            "columnName": "City",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Notes",
+            "columnName": "Notes",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Description",
+            "columnName": "Description",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "CustomerStatus",
+            "columnName": "CustomerStatus",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "LastModified",
+            "columnName": "LastModified",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "DateCreated",
+            "columnName": "DateCreated",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Version",
+            "columnName": "Version",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "CustomerID"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Inventory",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`InventoryID` TEXT NOT NULL, `RemoteID` INTEGER, `Title` TEXT, `Description` TEXT, `Quantity` INTEGER, `Value` REAL, `Type` TEXT, `LastModified` TEXT, `DateCreated` TEXT, `Version` TEXT, PRIMARY KEY(`InventoryID`))",
+        "fields": [
+          {
+            "fieldPath": "InventoryID",
+            "columnName": "InventoryID",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "RemoteID",
+            "columnName": "RemoteID",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Title",
+            "columnName": "Title",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Description",
+            "columnName": "Description",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Quantity",
+            "columnName": "Quantity",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Value",
+            "columnName": "Value",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Type",
+            "columnName": "Type",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "LastModified",
+            "columnName": "LastModified",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "DateCreated",
+            "columnName": "DateCreated",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Version",
+            "columnName": "Version",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "InventoryID"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Contracts",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`ContractID` TEXT NOT NULL, `RemoteID` INTEGER, `Title` TEXT, `DateStart` TEXT, `DateEnd` TEXT, `Value` REAL, `Notes` TEXT, `Description` TEXT, `ContractType` TEXT, `ContractStatus` INTEGER, `ContactName` TEXT, `LastModified` TEXT, `DateCreated` TEXT, `Version` TEXT, `CustomerID` TEXT, PRIMARY KEY(`ContractID`), FOREIGN KEY(`CustomerID`) REFERENCES `Customer`(`CustomerID`) ON UPDATE CASCADE ON DELETE RESTRICT )",
+        "fields": [
+          {
+            "fieldPath": "ContractID",
+            "columnName": "ContractID",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "RemoteID",
+            "columnName": "RemoteID",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Title",
+            "columnName": "Title",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "DateStart",
+            "columnName": "DateStart",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "DateEnd",
+            "columnName": "DateEnd",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Value",
+            "columnName": "Value",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Notes",
+            "columnName": "Notes",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Description",
+            "columnName": "Description",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "ContractType",
+            "columnName": "ContractType",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "ContractStatus",
+            "columnName": "ContractStatus",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "ContactName",
+            "columnName": "ContactName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "LastModified",
+            "columnName": "LastModified",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "DateCreated",
+            "columnName": "DateCreated",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Version",
+            "columnName": "Version",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "CustomerID",
+            "columnName": "CustomerID",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "ContractID"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": [
+          {
+            "table": "Customer",
+            "onDelete": "RESTRICT",
+            "onUpdate": "CASCADE",
+            "columns": [
+              "CustomerID"
+            ],
+            "referencedColumns": [
+              "CustomerID"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "ContractEquipments",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`ContractEquipmentID` TEXT NOT NULL, `RemoteID` INTEGER, `Value` REAL, `Visits` REAL, `ContractID` TEXT, `EquipmentID` TEXT, `LastModified` TEXT, `DateCreated` TEXT, `Version` TEXT, PRIMARY KEY(`ContractEquipmentID`), FOREIGN KEY(`EquipmentID`) REFERENCES `Equipments`(`EquipmentID`) ON UPDATE CASCADE ON DELETE RESTRICT , FOREIGN KEY(`ContractID`) REFERENCES `Contracts`(`ContractID`) ON UPDATE CASCADE ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "ContractEquipmentID",
+            "columnName": "ContractEquipmentID",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "RemoteID",
+            "columnName": "RemoteID",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Value",
+            "columnName": "Value",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Visits",
+            "columnName": "Visits",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "ContractID",
+            "columnName": "ContractID",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "EquipmentID",
+            "columnName": "EquipmentID",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "LastModified",
+            "columnName": "LastModified",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "DateCreated",
+            "columnName": "DateCreated",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Version",
+            "columnName": "Version",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "ContractEquipmentID"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": [
+          {
+            "table": "Equipments",
+            "onDelete": "RESTRICT",
+            "onUpdate": "CASCADE",
+            "columns": [
+              "EquipmentID"
+            ],
+            "referencedColumns": [
+              "EquipmentID"
+            ]
+          },
+          {
+            "table": "Contracts",
+            "onDelete": "CASCADE",
+            "onUpdate": "CASCADE",
+            "columns": [
+              "ContractID"
+            ],
+            "referencedColumns": [
+              "ContractID"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "Departments",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`DeparmentID` TEXT NOT NULL, `RemoteID` INTEGER, `Name` TEXT, `Phone` TEXT, `Email` TEXT, `ContactPerson` TEXT, `Notes` TEXT, `Description` TEXT, `DepartmentStatus` INTEGER, `LastModified` TEXT, `DateCreated` TEXT, `Version` TEXT, `CustomerID` TEXT, PRIMARY KEY(`DeparmentID`), FOREIGN KEY(`CustomerID`) REFERENCES `Customer`(`CustomerID`) ON UPDATE CASCADE ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "DeparmentID",
+            "columnName": "DeparmentID",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "RemoteID",
+            "columnName": "RemoteID",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Name",
+            "columnName": "Name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Phone",
+            "columnName": "Phone",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Email",
+            "columnName": "Email",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "ContactPerson",
+            "columnName": "ContactPerson",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Notes",
+            "columnName": "Notes",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Description",
+            "columnName": "Description",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "DepartmentStatus",
+            "columnName": "DepartmentStatus",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "LastModified",
+            "columnName": "LastModified",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "DateCreated",
+            "columnName": "DateCreated",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Version",
+            "columnName": "Version",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "CustomerID",
+            "columnName": "CustomerID",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "DeparmentID"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": [
+          {
+            "table": "Customer",
+            "onDelete": "CASCADE",
+            "onUpdate": "CASCADE",
+            "columns": [
+              "CustomerID"
+            ],
+            "referencedColumns": [
+              "CustomerID"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "Equipments",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`EquipmentID` TEXT NOT NULL, `RemoteID` INTEGER, `Name` TEXT, `SerialNumber` TEXT, `Model` TEXT, `Manufacturer` TEXT, `Notes` TEXT, `Description` TEXT, `EquipmentVersion` TEXT, `EquipmentCategory` TEXT, `Warranty` TEXT, `EquipmentStatus` INTEGER, `InstallationDate` TEXT, `LastModified` TEXT, `DateCreated` TEXT, `Version` TEXT, `CustomerID` TEXT, PRIMARY KEY(`EquipmentID`), FOREIGN KEY(`CustomerID`) REFERENCES `Customer`(`CustomerID`) ON UPDATE CASCADE ON DELETE RESTRICT )",
+        "fields": [
+          {
+            "fieldPath": "EquipmentID",
+            "columnName": "EquipmentID",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "RemoteID",
+            "columnName": "RemoteID",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Name",
+            "columnName": "Name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "SerialNumber",
+            "columnName": "SerialNumber",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Model",
+            "columnName": "Model",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Manufacturer",
+            "columnName": "Manufacturer",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Notes",
+            "columnName": "Notes",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Description",
+            "columnName": "Description",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "EquipmentVersion",
+            "columnName": "EquipmentVersion",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "EquipmentCategory",
+            "columnName": "EquipmentCategory",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Warranty",
+            "columnName": "Warranty",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "EquipmentStatus",
+            "columnName": "EquipmentStatus",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "InstallationDate",
+            "columnName": "InstallationDate",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "LastModified",
+            "columnName": "LastModified",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "DateCreated",
+            "columnName": "DateCreated",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Version",
+            "columnName": "Version",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "CustomerID",
+            "columnName": "CustomerID",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "EquipmentID"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": [
+          {
+            "table": "Customer",
+            "onDelete": "RESTRICT",
+            "onUpdate": "CASCADE",
+            "columns": [
+              "CustomerID"
+            ],
+            "referencedColumns": [
+              "CustomerID"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "FieldReportEquipment",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`FieldReportEquipmentID` TEXT NOT NULL, `RemoteID` INTEGER, `CompletedStatus` INTEGER, `LastModified` TEXT, `DateCreated` TEXT, `Version` TEXT, `FieldReportID` TEXT, `EquipmentID` TEXT, `MaintenanceID` TEXT, PRIMARY KEY(`FieldReportEquipmentID`), FOREIGN KEY(`FieldReportID`) REFERENCES `FieldReports`(`FieldReportID`) ON UPDATE CASCADE ON DELETE CASCADE , FOREIGN KEY(`EquipmentID`) REFERENCES `Equipments`(`EquipmentID`) ON UPDATE CASCADE ON DELETE SET NULL , FOREIGN KEY(`MaintenanceID`) REFERENCES `Maintenances`(`MaintenanceID`) ON UPDATE CASCADE ON DELETE SET NULL )",
+        "fields": [
+          {
+            "fieldPath": "FieldReportEquipmentID",
+            "columnName": "FieldReportEquipmentID",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "RemoteID",
+            "columnName": "RemoteID",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "CompletedStatus",
+            "columnName": "CompletedStatus",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "LastModified",
+            "columnName": "LastModified",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "DateCreated",
+            "columnName": "DateCreated",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Version",
+            "columnName": "Version",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "FieldReportID",
+            "columnName": "FieldReportID",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "EquipmentID",
+            "columnName": "EquipmentID",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "MaintenanceID",
+            "columnName": "MaintenanceID",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "FieldReportEquipmentID"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": [
+          {
+            "table": "FieldReports",
+            "onDelete": "CASCADE",
+            "onUpdate": "CASCADE",
+            "columns": [
+              "FieldReportID"
+            ],
+            "referencedColumns": [
+              "FieldReportID"
+            ]
+          },
+          {
+            "table": "Equipments",
+            "onDelete": "SET NULL",
+            "onUpdate": "CASCADE",
+            "columns": [
+              "EquipmentID"
+            ],
+            "referencedColumns": [
+              "EquipmentID"
+            ]
+          },
+          {
+            "table": "Maintenances",
+            "onDelete": "SET NULL",
+            "onUpdate": "CASCADE",
+            "columns": [
+              "MaintenanceID"
+            ],
+            "referencedColumns": [
+              "MaintenanceID"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "FieldReportInventory",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`FieldReportInventoryID` TEXT NOT NULL, `RemoteID` INTEGER, `LastModified` TEXT, `DateCreated` TEXT, `Version` TEXT, `FieldReportID` TEXT, `InventoryID` TEXT, PRIMARY KEY(`FieldReportInventoryID`), FOREIGN KEY(`FieldReportID`) REFERENCES `FieldReports`(`FieldReportID`) ON UPDATE CASCADE ON DELETE CASCADE , FOREIGN KEY(`InventoryID`) REFERENCES `Inventory`(`InventoryID`) ON UPDATE CASCADE ON DELETE SET NULL )",
+        "fields": [
+          {
+            "fieldPath": "FieldReportInventoryID",
+            "columnName": "FieldReportInventoryID",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "RemoteID",
+            "columnName": "RemoteID",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "LastModified",
+            "columnName": "LastModified",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "DateCreated",
+            "columnName": "DateCreated",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Version",
+            "columnName": "Version",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "FieldReportID",
+            "columnName": "FieldReportID",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "InventoryID",
+            "columnName": "InventoryID",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "FieldReportInventoryID"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": [
+          {
+            "table": "FieldReports",
+            "onDelete": "CASCADE",
+            "onUpdate": "CASCADE",
+            "columns": [
+              "FieldReportID"
+            ],
+            "referencedColumns": [
+              "FieldReportID"
+            ]
+          },
+          {
+            "table": "Inventory",
+            "onDelete": "SET NULL",
+            "onUpdate": "CASCADE",
+            "columns": [
+              "InventoryID"
+            ],
+            "referencedColumns": [
+              "InventoryID"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "FieldReports",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`FieldReportID` TEXT NOT NULL, `RemoteID` INTEGER, `ReportNumber` TEXT, `Description` TEXT, `StartDate` TEXT, `EndDate` TEXT, `Title` TEXT, `Department` TEXT, `ClientName` TEXT, `ReportStatus` TEXT, `ClientSignature` BLOB, `Value` REAL, `LastModified` TEXT, `DateCreated` TEXT, `Version` TEXT, `CustomerID` TEXT, `ContractID` TEXT, `UserID` TEXT, `CaseID` TEXT, PRIMARY KEY(`FieldReportID`), FOREIGN KEY(`CustomerID`) REFERENCES `Customer`(`CustomerID`) ON UPDATE CASCADE ON DELETE RESTRICT , FOREIGN KEY(`UserID`) REFERENCES `Users`(`UserID`) ON UPDATE CASCADE ON DELETE SET NULL , FOREIGN KEY(`ContractID`) REFERENCES `Contracts`(`ContractID`) ON UPDATE CASCADE ON DELETE SET NULL , FOREIGN KEY(`CaseID`) REFERENCES `Tickets`(`TicketID`) ON UPDATE CASCADE ON DELETE SET NULL )",
+        "fields": [
+          {
+            "fieldPath": "FieldReportID",
+            "columnName": "FieldReportID",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "RemoteID",
+            "columnName": "RemoteID",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "ReportNumber",
+            "columnName": "ReportNumber",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Description",
+            "columnName": "Description",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "StartDate",
+            "columnName": "StartDate",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "EndDate",
+            "columnName": "EndDate",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Title",
+            "columnName": "Title",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Department",
+            "columnName": "Department",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "ClientName",
+            "columnName": "ClientName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "ReportStatus",
+            "columnName": "ReportStatus",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "ClientSignature",
+            "columnName": "ClientSignature",
+            "affinity": "BLOB",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Value",
+            "columnName": "Value",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "LastModified",
+            "columnName": "LastModified",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "DateCreated",
+            "columnName": "DateCreated",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Version",
+            "columnName": "Version",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "CustomerID",
+            "columnName": "CustomerID",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "ContractID",
+            "columnName": "ContractID",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "UserID",
+            "columnName": "UserID",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "CaseID",
+            "columnName": "CaseID",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "FieldReportID"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": [
+          {
+            "table": "Customer",
+            "onDelete": "RESTRICT",
+            "onUpdate": "CASCADE",
+            "columns": [
+              "CustomerID"
+            ],
+            "referencedColumns": [
+              "CustomerID"
+            ]
+          },
+          {
+            "table": "Users",
+            "onDelete": "SET NULL",
+            "onUpdate": "CASCADE",
+            "columns": [
+              "UserID"
+            ],
+            "referencedColumns": [
+              "UserID"
+            ]
+          },
+          {
+            "table": "Contracts",
+            "onDelete": "SET NULL",
+            "onUpdate": "CASCADE",
+            "columns": [
+              "ContractID"
+            ],
+            "referencedColumns": [
+              "ContractID"
+            ]
+          },
+          {
+            "table": "Tickets",
+            "onDelete": "SET NULL",
+            "onUpdate": "CASCADE",
+            "columns": [
+              "CaseID"
+            ],
+            "referencedColumns": [
+              "TicketID"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "Maintenances",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`MaintenanceID` TEXT NOT NULL, `RemoteID` INTEGER, `Name` TEXT, `Description` TEXT, `LastModified` TEXT, `DateCreated` TEXT, `Version` TEXT, PRIMARY KEY(`MaintenanceID`))",
+        "fields": [
+          {
+            "fieldPath": "MaintenanceID",
+            "columnName": "MaintenanceID",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "RemoteID",
+            "columnName": "RemoteID",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Name",
+            "columnName": "Name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Description",
+            "columnName": "Description",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "LastModified",
+            "columnName": "LastModified",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "DateCreated",
+            "columnName": "DateCreated",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Version",
+            "columnName": "Version",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "MaintenanceID"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Manufacturer",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`ManufacturerID` TEXT NOT NULL, `RemoteID` INTEGER, `Name` TEXT, `Style` TEXT, `LastModified` TEXT, `DateCreated` TEXT, `Version` TEXT, PRIMARY KEY(`ManufacturerID`))",
+        "fields": [
+          {
+            "fieldPath": "ManufacturerID",
+            "columnName": "ManufacturerID",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "RemoteID",
+            "columnName": "RemoteID",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Name",
+            "columnName": "Name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Style",
+            "columnName": "Style",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "LastModified",
+            "columnName": "LastModified",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "DateCreated",
+            "columnName": "DateCreated",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Version",
+            "columnName": "Version",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "ManufacturerID"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "ModelAsset",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`ModelID` TEXT NOT NULL, `RemoteID` INTEGER, `Name` TEXT, `Style` TEXT, `LastModified` TEXT, `DateCreated` TEXT, `Version` TEXT, PRIMARY KEY(`ModelID`))",
+        "fields": [
+          {
+            "fieldPath": "ModelID",
+            "columnName": "ModelID",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "RemoteID",
+            "columnName": "RemoteID",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Name",
+            "columnName": "Name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Style",
+            "columnName": "Style",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "LastModified",
+            "columnName": "LastModified",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "DateCreated",
+            "columnName": "DateCreated",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Version",
+            "columnName": "Version",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "ModelID"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "CategoryAsset",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`CategoryAssetID` TEXT NOT NULL, `RemoteID` INTEGER, `Name` TEXT, `Style` TEXT, `LastModified` TEXT, `DateCreated` TEXT, `Version` TEXT, PRIMARY KEY(`CategoryAssetID`))",
+        "fields": [
+          {
+            "fieldPath": "CategoryAssetID",
+            "columnName": "CategoryAssetID",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "RemoteID",
+            "columnName": "RemoteID",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Name",
+            "columnName": "Name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Style",
+            "columnName": "Style",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "LastModified",
+            "columnName": "LastModified",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "DateCreated",
+            "columnName": "DateCreated",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Version",
+            "columnName": "Version",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "CategoryAssetID"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Tickets",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`TicketID` TEXT NOT NULL, `RemoteID` INTEGER, `Title` TEXT, `TicketNumber` TEXT, `Description` TEXT, `Notes` TEXT, `Urgency` TEXT, `Active` INTEGER, `DateStart` TEXT, `DateEnd` TEXT, `LastModified` TEXT, `DateCreated` TEXT, `Version` TEXT, `UserID` TEXT, `CustomerID` TEXT, `EquipmentID` TEXT, PRIMARY KEY(`TicketID`), FOREIGN KEY(`CustomerID`) REFERENCES `Customer`(`CustomerID`) ON UPDATE CASCADE ON DELETE CASCADE , FOREIGN KEY(`UserID`) REFERENCES `Users`(`UserID`) ON UPDATE CASCADE ON DELETE SET NULL , FOREIGN KEY(`EquipmentID`) REFERENCES `Equipments`(`EquipmentID`) ON UPDATE CASCADE ON DELETE SET NULL )",
+        "fields": [
+          {
+            "fieldPath": "TicketID",
+            "columnName": "TicketID",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "RemoteID",
+            "columnName": "RemoteID",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Title",
+            "columnName": "Title",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "TicketNumber",
+            "columnName": "TicketNumber",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Description",
+            "columnName": "Description",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Notes",
+            "columnName": "Notes",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Urgency",
+            "columnName": "Urgency",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Active",
+            "columnName": "Active",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "DateStart",
+            "columnName": "DateStart",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "DateEnd",
+            "columnName": "DateEnd",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "LastModified",
+            "columnName": "LastModified",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "DateCreated",
+            "columnName": "DateCreated",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Version",
+            "columnName": "Version",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "UserID",
+            "columnName": "UserID",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "CustomerID",
+            "columnName": "CustomerID",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "EquipmentID",
+            "columnName": "EquipmentID",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "TicketID"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": [
+          {
+            "table": "Customer",
+            "onDelete": "CASCADE",
+            "onUpdate": "CASCADE",
+            "columns": [
+              "CustomerID"
+            ],
+            "referencedColumns": [
+              "CustomerID"
+            ]
+          },
+          {
+            "table": "Users",
+            "onDelete": "SET NULL",
+            "onUpdate": "CASCADE",
+            "columns": [
+              "UserID"
+            ],
+            "referencedColumns": [
+              "UserID"
+            ]
+          },
+          {
+            "table": "Equipments",
+            "onDelete": "SET NULL",
+            "onUpdate": "CASCADE",
+            "columns": [
+              "EquipmentID"
+            ],
+            "referencedColumns": [
+              "EquipmentID"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "Users",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`UserID` TEXT NOT NULL, `RemoteID` INTEGER, `Name` TEXT, `Description` TEXT, `Email` TEXT, `Phone` TEXT, `Signature` BLOB, `PrefixWO` TEXT, `PrefixTC` TEXT, `LastReportNumber` INTEGER, `LastTCNumber` INTEGER, `LastModified` TEXT, `DateCreated` TEXT, `Version` TEXT, PRIMARY KEY(`UserID`))",
+        "fields": [
+          {
+            "fieldPath": "UserID",
+            "columnName": "UserID",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "RemoteID",
+            "columnName": "RemoteID",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Name",
+            "columnName": "Name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Description",
+            "columnName": "Description",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Email",
+            "columnName": "Email",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Phone",
+            "columnName": "Phone",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Signature",
+            "columnName": "Signature",
+            "affinity": "BLOB",
+            "notNull": false
+          },
+          {
+            "fieldPath": "ReportPrefix",
+            "columnName": "PrefixWO",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "TechnicalCasePrefix",
+            "columnName": "PrefixTC",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "LastReportNumber",
+            "columnName": "LastReportNumber",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "LastTCNumber",
+            "columnName": "LastTCNumber",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "LastModified",
+            "columnName": "LastModified",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "DateCreated",
+            "columnName": "DateCreated",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Version",
+            "columnName": "Version",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "UserID"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "CheckForms",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`CheckFormID` TEXT NOT NULL, `RemoteID` INTEGER, `MaintenancesID` TEXT, `Description` TEXT, `ValueExpected` TEXT, `ValueType` TEXT, `LastModified` TEXT, `DateCreated` TEXT, `Version` TEXT, PRIMARY KEY(`CheckFormID`))",
+        "fields": [
+          {
+            "fieldPath": "CheckFormID",
+            "columnName": "CheckFormID",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "RemoteID",
+            "columnName": "RemoteID",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "MaintenancesID",
+            "columnName": "MaintenancesID",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Description",
+            "columnName": "Description",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "ValueExpected",
+            "columnName": "ValueExpected",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "ValueType",
+            "columnName": "ValueType",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "LastModified",
+            "columnName": "LastModified",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "DateCreated",
+            "columnName": "DateCreated",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Version",
+            "columnName": "Version",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "CheckFormID"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Settings",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`SettingsID` TEXT NOT NULL, `RemoteID` INTEGER, `SettingsKey` TEXT, `SettingsValue` TEXT, `SettingsStyle` TEXT, `SettingsDescription` TEXT, `LastModified` TEXT, `DateCreated` TEXT, `Version` TEXT, PRIMARY KEY(`SettingsID`))",
+        "fields": [
+          {
+            "fieldPath": "SettingsID",
+            "columnName": "SettingsID",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "RemoteID",
+            "columnName": "RemoteID",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "SettingsKey",
+            "columnName": "SettingsKey",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "SettingsValue",
+            "columnName": "SettingsValue",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "SettingsStyle",
+            "columnName": "SettingsStyle",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "SettingsDescription",
+            "columnName": "SettingsDescription",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "LastModified",
+            "columnName": "LastModified",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "DateCreated",
+            "columnName": "DateCreated",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Version",
+            "columnName": "Version",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "SettingsID"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Tools",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`ToolsID` TEXT NOT NULL, `RemoteID` INTEGER, `Title` TEXT, `Description` TEXT, `Model` TEXT, `Manufacturer` TEXT, `SerialNumber` TEXT, `CalibrationDate` TEXT, `LastModified` TEXT, `DateCreated` TEXT, `Version` TEXT, PRIMARY KEY(`ToolsID`))",
+        "fields": [
+          {
+            "fieldPath": "ToolsID",
+            "columnName": "ToolsID",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "RemoteID",
+            "columnName": "RemoteID",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Title",
+            "columnName": "Title",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Description",
+            "columnName": "Description",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Model",
+            "columnName": "Model",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Manufacturer",
+            "columnName": "Manufacturer",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "SerialNumber",
+            "columnName": "SerialNumber",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "CalibrationDate",
+            "columnName": "CalibrationDate",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "LastModified",
+            "columnName": "LastModified",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "DateCreated",
+            "columnName": "DateCreated",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Version",
+            "columnName": "Version",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "ToolsID"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "FieldReportCheckForm",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`FieldReportCheckFormID` TEXT NOT NULL, `RemoteID` INTEGER, `FieldReportEquipmentID` TEXT, `Description` TEXT, `ValueExpected` TEXT, `ValueMeasured` TEXT, `Result` TEXT, `LastModified` TEXT, `DateCreated` TEXT, `Version` TEXT, PRIMARY KEY(`FieldReportCheckFormID`), FOREIGN KEY(`FieldReportEquipmentID`) REFERENCES `FieldReportEquipment`(`FieldReportEquipmentID`) ON UPDATE CASCADE ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "FieldReportCheckFormID",
+            "columnName": "FieldReportCheckFormID",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "RemoteID",
+            "columnName": "RemoteID",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "FieldReportEquipmentID",
+            "columnName": "FieldReportEquipmentID",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Description",
+            "columnName": "Description",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "ValueExpected",
+            "columnName": "ValueExpected",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "ValueMeasured",
+            "columnName": "ValueMeasured",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Result",
+            "columnName": "Result",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "LastModified",
+            "columnName": "LastModified",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "DateCreated",
+            "columnName": "DateCreated",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Version",
+            "columnName": "Version",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "FieldReportCheckFormID"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": [
+          {
+            "table": "FieldReportEquipment",
+            "onDelete": "CASCADE",
+            "onUpdate": "CASCADE",
+            "columns": [
+              "FieldReportEquipmentID"
+            ],
+            "referencedColumns": [
+              "FieldReportEquipmentID"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "FieldReportTools",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`FieldReportToolsID` TEXT NOT NULL, `RemoteID` INTEGER, `FieldReportID` TEXT, `ToolsID` TEXT, `LastModified` TEXT, `DateCreated` TEXT, `Version` TEXT, PRIMARY KEY(`FieldReportToolsID`), FOREIGN KEY(`FieldReportID`) REFERENCES `FieldReports`(`FieldReportID`) ON UPDATE CASCADE ON DELETE CASCADE , FOREIGN KEY(`ToolsID`) REFERENCES `Tools`(`ToolsID`) ON UPDATE CASCADE ON DELETE SET NULL )",
+        "fields": [
+          {
+            "fieldPath": "FieldReportToolsID",
+            "columnName": "FieldReportToolsID",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "RemoteID",
+            "columnName": "RemoteID",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "FieldReportID",
+            "columnName": "FieldReportID",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "ToolsID",
+            "columnName": "ToolsID",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "LastModified",
+            "columnName": "LastModified",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "DateCreated",
+            "columnName": "DateCreated",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Version",
+            "columnName": "Version",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "FieldReportToolsID"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": [
+          {
+            "table": "FieldReports",
+            "onDelete": "CASCADE",
+            "onUpdate": "CASCADE",
+            "columns": [
+              "FieldReportID"
+            ],
+            "referencedColumns": [
+              "FieldReportID"
+            ]
+          },
+          {
+            "table": "Tools",
+            "onDelete": "SET NULL",
+            "onUpdate": "CASCADE",
+            "columns": [
+              "ToolsID"
+            ],
+            "referencedColumns": [
+              "ToolsID"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "Synchronization",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`SyncID` TEXT NOT NULL, `Entity` TEXT, `LastSyncDate` TEXT, `Status` TEXT, `Notes` TEXT, PRIMARY KEY(`SyncID`))",
+        "fields": [
+          {
+            "fieldPath": "SyncID",
+            "columnName": "SyncID",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Entity",
+            "columnName": "Entity",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "LastSyncDate",
+            "columnName": "LastSyncDate",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Status",
+            "columnName": "Status",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Notes",
+            "columnName": "Notes",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "SyncID"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Tasks",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`TaskID` TEXT NOT NULL, `Title` TEXT, `Description` TEXT, `Status` TEXT, `Priority` TEXT, `DateStart` TEXT, `DateDue` TEXT, `DateCompleted` TEXT, `LastModified` TEXT, `DateCreated` TEXT, `TicketID` TEXT, `UserID` TEXT, PRIMARY KEY(`TaskID`), FOREIGN KEY(`TicketID`) REFERENCES `Tickets`(`TicketID`) ON UPDATE CASCADE ON DELETE SET NULL , FOREIGN KEY(`UserID`) REFERENCES `Users`(`UserID`) ON UPDATE CASCADE ON DELETE SET NULL )",
+        "fields": [
+          {
+            "fieldPath": "TaskID",
+            "columnName": "TaskID",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Title",
+            "columnName": "Title",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Description",
+            "columnName": "Description",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Status",
+            "columnName": "Status",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Priority",
+            "columnName": "Priority",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "DateStart",
+            "columnName": "DateStart",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "DateDue",
+            "columnName": "DateDue",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "DateCompleted",
+            "columnName": "DateCompleted",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "LastModified",
+            "columnName": "LastModified",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "DateCreated",
+            "columnName": "DateCreated",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "TicketID",
+            "columnName": "TicketID",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "UserID",
+            "columnName": "UserID",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "TaskID"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": [
+          {
+            "table": "Tickets",
+            "onDelete": "SET NULL",
+            "onUpdate": "CASCADE",
+            "columns": [
+              "TicketID"
+            ],
+            "referencedColumns": [
+              "TicketID"
+            ]
+          },
+          {
+            "table": "Users",
+            "onDelete": "SET NULL",
+            "onUpdate": "CASCADE",
+            "columns": [
+              "UserID"
+            ],
+            "referencedColumns": [
+              "UserID"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "Ticket_history",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`TicketHistoryID` TEXT NOT NULL, `RemoteID` INTEGER, `Title` TEXT, `TicketNumber` TEXT, `Description` TEXT, `Notes` TEXT, `Urgency` TEXT, `Active` INTEGER, `DateStart` TEXT, `DateEnd` TEXT, `LastModified` TEXT, `DateCreated` TEXT, `Version` TEXT, `UserID` TEXT, `CustomerID` TEXT, `EquipmentID` TEXT, PRIMARY KEY(`TicketHistoryID`), FOREIGN KEY(`CustomerID`) REFERENCES `Customer`(`CustomerID`) ON UPDATE CASCADE ON DELETE CASCADE , FOREIGN KEY(`UserID`) REFERENCES `Users`(`UserID`) ON UPDATE CASCADE ON DELETE SET NULL , FOREIGN KEY(`EquipmentID`) REFERENCES `Equipments`(`EquipmentID`) ON UPDATE CASCADE ON DELETE SET NULL )",
+        "fields": [
+          {
+            "fieldPath": "TicketHistoryID",
+            "columnName": "TicketHistoryID",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "RemoteID",
+            "columnName": "RemoteID",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Title",
+            "columnName": "Title",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "TicketNumber",
+            "columnName": "TicketNumber",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Description",
+            "columnName": "Description",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Notes",
+            "columnName": "Notes",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Urgency",
+            "columnName": "Urgency",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Active",
+            "columnName": "Active",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "DateStart",
+            "columnName": "DateStart",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "DateEnd",
+            "columnName": "DateEnd",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "LastModified",
+            "columnName": "LastModified",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "DateCreated",
+            "columnName": "DateCreated",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Version",
+            "columnName": "Version",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "UserID",
+            "columnName": "UserID",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "CustomerID",
+            "columnName": "CustomerID",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "EquipmentID",
+            "columnName": "EquipmentID",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "TicketHistoryID"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": [
+          {
+            "table": "Customer",
+            "onDelete": "CASCADE",
+            "onUpdate": "CASCADE",
+            "columns": [
+              "CustomerID"
+            ],
+            "referencedColumns": [
+              "CustomerID"
+            ]
+          },
+          {
+            "table": "Users",
+            "onDelete": "SET NULL",
+            "onUpdate": "CASCADE",
+            "columns": [
+              "UserID"
+            ],
+            "referencedColumns": [
+              "UserID"
+            ]
+          },
+          {
+            "table": "Equipments",
+            "onDelete": "SET NULL",
+            "onUpdate": "CASCADE",
+            "columns": [
+              "EquipmentID"
+            ],
+            "referencedColumns": [
+              "EquipmentID"
+            ]
+          }
+        ]
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'fc5e9634dffc192c09f178492ee96301')"
+    ]
+  }
+}

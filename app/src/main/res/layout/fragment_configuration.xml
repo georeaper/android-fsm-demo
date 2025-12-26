@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ui.Configuration.ConfigurationFragment">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/background_primary_lightB">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
+                <com.google.android.material.textview.MaterialTextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:text="Application Configuration"
+                    android:textStyle="bold"
+                    android:padding="4dp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:layout_marginEnd="2dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:orientation="vertical">
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/configuration_masterData_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:text="Master Data"
+                        android:textStyle="bold"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="2dp"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="8dp"
+                        />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/configuration_masterData_tv_helper"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="Customize data for dropdown selections"
+                        android:textColor="@color/color_grey"
+                        android:paddingBottom="4dp"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="8dp"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:gravity="center" >
+
+                    <ImageButton
+                        android:id="@+id/configuration_masterData_btn"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+
+                        android:contentDescription="TODO"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/navigation_list_right"/>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:dividerThickness="2dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:layout_marginEnd="2dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:orientation="vertical">
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/configuration_checkForms_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:text="Checkforms"
+                        android:textStyle="bold"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="2dp"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="8dp"
+                        />
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/configuration_checkForms_tv_helpder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="Custom made checkforms for each equipment"
+                        android:textColor="@color/color_grey"
+                        android:paddingBottom="4dp"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="8dp"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:gravity="center" >
+
+                    <ImageButton
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:id="@+id/configuration_checkForms_btn"
+
+                        android:contentDescription="TODO"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/navigation_list_right"/>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:dividerThickness="2dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:layout_marginEnd="2dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:orientation="vertical">
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/configuration_templatePDFreport_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:text="Print template"
+                        android:textStyle="bold"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="2dp"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="8dp"
+                        />
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/configuration_templatePDFreport_tv_helper"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="Printing templates PDF or printer"
+                        android:textColor="@color/color_grey"
+                        android:paddingBottom="4dp"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="8dp"
+                        />
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:gravity="center" >
+
+                    <ImageButton
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:id="@+id/configuration_templatePDFreport_btn"
+
+                        android:contentDescription="TODO"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/navigation_list_right"/>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:dividerThickness="2dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:layout_marginEnd="2dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:orientation="vertical"
+                    android:id="@+id/notification_block">
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/configuration_notification_system"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:text="Notification system"
+                        android:textStyle="bold"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="2dp"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="8dp"
+                        />
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/configuration_notification_system_helper"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="Alert user for notifications made for the functionality"
+                        android:textColor="@color/color_grey"
+                        android:paddingBottom="4dp"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="8dp"
+                        />
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:gravity="center" >
+
+                    <ImageButton
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:id="@+id/configuration_notification_btn"
+
+                        android:contentDescription="TODO"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/navigation_list_right"/>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:dividerThickness="2dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</FrameLayout>

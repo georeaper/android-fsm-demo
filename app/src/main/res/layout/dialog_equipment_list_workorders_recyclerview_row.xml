@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_margin="5dp">
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.4"
+        android:textSize="14sp"
+        android:text="@string/model"
+        android:gravity="center_vertical"
+        android:padding="5dp"
+        android:id="@+id/dialogEquipmentListWorkOrdersRecyclerviewRowModelTV"
+        />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.6"
+        android:textSize="14sp"
+        android:padding="5dp"
+        android:gravity="center_vertical"
+        android:text="@string/SerialNumber"
+        android:id="@+id/dialogEquipmentListWorkOrdersRecyclerviewRowSerialNumberTV"
+        />
+
+
+
+</LinearLayout>

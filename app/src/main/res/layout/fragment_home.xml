@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ui.HomeFragment"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/background_primary_lightB"
+
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="6dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    >
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:padding="8dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:background="@drawable/home_kpi_round_corners_whitebackground">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Today's Tasks"
+                                android:textSize="17sp"
+                                android:textColor="@color/text_color_headers_KPI"
+                                android:layout_weight="0.8"
+                                android:layout_marginStart="8dp"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                />
+                            <ImageButton
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/diagonal_arrow_right"
+                                android:background="#00000000"
+                                android:layout_weight="0.2"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_marginTop="16dp"
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="5"
+                                android:textSize="20sp"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/attention"
+                                android:layout_weight="0.2"
+                                android:layout_gravity="center"
+                                android:padding="1dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="5"
+                                android:textColor="@color/color_red"
+                                android:textSize="14sp"
+                                android:layout_weight="0.4"
+                                android:gravity="center"
+                                android:layout_gravity="center"/>
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:text="Overdue Tasks"
+                                android:textColor="@color/color_red"
+                                android:layout_weight="0.3"
+                                android:layout_gravity="center"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+
+                                />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:padding="8dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:background="@drawable/home_kpi_round_corners_whitebackground">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Technical Cases"
+                                android:textSize="17sp"
+                                android:textColor="@color/text_color_headers_KPI"
+                                android:layout_marginStart="8dp"
+                                android:layout_weight="0.8"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:singleLine="true"/>
+                            <ImageButton
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/diagonal_arrow_right"
+                                android:background="#00000000"
+                                android:layout_weight="0.2"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_marginTop="16dp"
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="5"
+                                android:textSize="20sp"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/statistic_up"
+                                android:layout_weight="0.2"
+                                android:layout_gravity="center"
+                                android:padding="1dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1.5%"
+                                android:textColor="@color/color_dark_green"
+                                android:textSize="14sp"
+                                android:layout_weight="0.4"
+                                android:gravity="center"
+                                android:layout_gravity="center"/>
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:text="From last month"
+                                android:textColor="@color/text_color_headers_KPI"
+                                android:layout_weight="0.3"
+                                android:layout_gravity="center"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+
+                                />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    >
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:padding="8dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:background="@drawable/home_kpi_round_corners_whitebackground">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="WO monthly"
+                                android:textSize="17sp"
+                                android:textColor="@color/text_color_headers_KPI"
+                                android:layout_marginStart="8dp"
+                                android:layout_weight="0.8"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:singleLine="true"/>
+                            <ImageButton
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/diagonal_arrow_right"
+                                android:background="#00000000"
+                                android:layout_weight="0.2"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_marginTop="16dp"
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="5"
+                                android:textSize="20sp"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/statistic_up"
+                                android:layout_weight="0.2"
+                                android:layout_gravity="center"
+                                android:padding="1dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="5%"
+                                android:textColor="@color/color_dark_green"
+                                android:textSize="14sp"
+                                android:layout_weight="0.4"
+                                android:gravity="center"
+                                android:layout_gravity="center"/>
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:text="From last month"
+                                android:textColor="@color/text_color_headers_KPI"
+                                android:layout_weight="0.3"
+                                android:layout_gravity="center"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+
+                                />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:padding="8dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:background="@drawable/home_kpi_round_corners_whitebackground">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="17sp"
+                                android:text="WO monthly"
+                                android:textColor="@color/text_color_headers_KPI"
+                                android:layout_marginStart="8dp"
+                                android:layout_weight="0.8"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:singleLine="true"/>
+                            <ImageButton
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/diagonal_arrow_right"
+                                android:background="#00000000"
+                                android:layout_weight="0.2"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_marginTop="16dp"
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="5"
+                                android:textSize="20sp"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/statistic_down"
+                                android:layout_weight="0.2"
+                                android:layout_gravity="center"
+                                android:padding="1dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="5%"
+                                android:textColor="@color/color_red"
+                                android:textSize="14sp"
+                                android:layout_weight="0.4"
+                                android:gravity="center"
+                                android:layout_gravity="center"/>
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:text="From last month"
+                                android:textColor="@color/text_color_headers_KPI"
+                                android:layout_weight="0.3"
+                                android:layout_gravity="center"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+
+                                />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/white"
+                android:background="@drawable/background_round_corners_white_stroke">
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/technicalCases_tv_content_item_view"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:drawableStart="@drawable/header_attention_home"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:text="@string/urgentCasesEscalations"
+                    android:textColor="@color/text_color_headers_KPI"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                     />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewHomeWorkOrder"
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:visibility="visible"
+                    android:background="@drawable/background_round_corners_white_stroke"
+                    android:backgroundTint="@color/white"
+                    tools:listitem="@layout/recyclerview_home_row"
+ />
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    </FrameLayout>
+

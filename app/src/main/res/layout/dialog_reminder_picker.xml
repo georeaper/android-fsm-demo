@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Reminder"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:paddingBottom="12dp" />
+
+    <EditText
+        android:id="@+id/reminder_value_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Enter value (e.g. 2)"
+        android:padding="12dp" />
+
+    <RadioGroup
+        android:id="@+id/reminder_unit_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="16dp">
+
+        <RadioButton android:id="@+id/unit_minutes" android:text="Minutes"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" />
+        <RadioButton android:id="@+id/unit_hours"   android:text="Hours" android:layout_height="wrap_content"
+            android:layout_width="wrap_content" />
+        <RadioButton android:id="@+id/unit_days"    android:text="Days" android:layout_height="wrap_content"
+            android:layout_width="wrap_content" />
+        <RadioButton android:id="@+id/unit_weeks"   android:text="Weeks" android:layout_height="wrap_content"
+            android:layout_width="wrap_content" />
+        <RadioButton android:id="@+id/unit_months"  android:text="Months" android:layout_height="wrap_content"
+            android:layout_width="wrap_content" />
+        <RadioButton android:id="@+id/unit_years"   android:text="Years" android:layout_height="wrap_content"
+            android:layout_width="wrap_content" />
+
+    </RadioGroup>
+
+</LinearLayout>

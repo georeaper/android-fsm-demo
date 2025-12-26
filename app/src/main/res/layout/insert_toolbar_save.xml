@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+
+        android:layout_marginEnd="20dp"
+        android:padding="2dp"
+        android:textSize="8sp"
+        android:text="Save"
+        android:backgroundTint="@color/icons_color_lightB"
+        android:id="@+id/btn_layout_menu_insert">
+
+    </com.google.android.material.button.MaterialButton>
+
+</LinearLayout>

@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/main_menu_Sync"
+        android:title="@string/synchronisation"
+        android:icon="@drawable/sync2"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="200"
+
+        />
+    <item
+        android:id="@+id/main_menu_notification"
+        android:title="@string/notification"
+        android:icon="@drawable/notification"
+        app:showAsAction="always"
+        android:orderInCategory="200"
+        />
+</menu>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Outer background color -->
+    <solid android:color="@color/BackgroundElementsColor" />
+
+    <!-- Border color and thickness -->
+    <stroke
+        android:width="2dp"
+        android:color="@color/AppColor" />
+
+    <!-- Circle shape -->
+    <corners android:radius="1000dp" /> <!-- A large value to approximate a circle -->
+
+</shape>
+
+
+
+
+

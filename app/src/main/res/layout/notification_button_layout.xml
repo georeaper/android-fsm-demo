@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:foreground="?attr/selectableItemBackgroundBorderless"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ImageView
+        android:id="@+id/notification_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/notification"
+        android:contentDescription="@string/notification_icon_description" />
+
+    <!-- Badge TextView for the notification count -->
+    <TextView
+        android:id="@+id/badge_text_view"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="top|end"
+        android:background="@drawable/badge_background"
+
+        android:textColor="@android:color/white"
+        android:textSize="9sp"
+        android:gravity="center"
+
+
+        android:text="5" /> <!-- You can dynamically change this -->
+</FrameLayout>

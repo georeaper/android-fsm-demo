@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="8dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="4dp"
+        android:layout_gravity="center"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Select Customers"
+
+            android:textSize="16sp"
+            android:padding="4dp"
+            android:layout_margin="2dp"
+            android:layout_weight="0.8"
+            />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="TODO"
+            android:src="@drawable/right_filter_arrow"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center"
+            android:visibility="visible"
+            android:layout_marginEnd="16dp"
+            android:id="@+id/btnToggleRecycler"/>
+        <TextView
+            android:id="@+id/tvSelectedCount"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/badge_filter_selected_items"
+            android:textColor="@android:color/white"
+            android:text="0"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginEnd="16dp"/>
+
+
+    </LinearLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerFilterList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:padding="4dp"
+        android:layout_margin="4dp"
+        android:visibility="gone"/>
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:dividerThickness="1dp"/>
+</LinearLayout>

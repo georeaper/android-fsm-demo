@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <TextView
+        android:text="Date Range"
+
+        android:textSize="16sp"
+        android:paddingBottom="8dp"
+        android:id="@+id/tvTitle"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <EditText
+            android:id="@+id/etDateFrom"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="From Date"
+            android:focusable="false"
+            android:inputType="none" />
+
+        <Space android:layout_width="8dp" android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/etDateTo"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="To Date"
+            android:focusable="false"
+            android:inputType="none" />
+    </LinearLayout>
+</LinearLayout>

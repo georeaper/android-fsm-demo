@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ui.Configuration.TemplatesFragment">
+
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="Main Info and Tools File"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/template_fileAndTools_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="14sp"
+                android:inputType="none"
+                android:focusable="false"
+                android:clickable="true"
+            android:drawableEnd="@drawable/file_missing"
+             />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="Equipment and Spare Parts File">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/template_file_equipmentsAndSpareParts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:inputType="none"
+            android:focusable="false"
+            android:clickable="true"
+            android:drawableEnd="@drawable/file_missing"
+           />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="CheckForms File">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/template_file_checkForms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:inputType="none"
+            android:focusable="false"
+            android:clickable="true"
+            android:drawableEnd="@drawable/file_missing"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+        
+    </LinearLayout>
+
+</FrameLayout>

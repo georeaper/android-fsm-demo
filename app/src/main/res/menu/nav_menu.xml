@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/home_item"
+            android:title="Home"
+            android:icon="@drawable/home_drawer_icon" />
+<!--        <item-->
+<!--            android:id="@+id/cases_item"-->
+<!--            android:title="Technical Case"-->
+<!--            android:icon="@drawable/technicalcases_drawer_icon"/>-->
+        <item
+            android:id="@+id/workOrder_item"
+            android:title="Work Order"
+            android:icon="@drawable/workorder_drawer_icon"/>
+<!--        <item-->
+<!--            android:id="@+id/tasks_item"-->
+<!--            android:title="Tasks"-->
+<!--            android:icon="@drawable/tasks_drawer_icon"/>-->
+<!--        <item-->
+<!--            android:id="@+id/contract_item"-->
+<!--            android:title="Contract"-->
+<!--            android:icon="@drawable/contracts_drawer_icon"/>-->
+
+        <item
+            android:id="@+id/customer_item"
+            android:title="Customer"
+            android:icon="@drawable/customer_drawer_icon"/>
+
+        <item
+            android:id="@+id/equipment_item"
+            android:title="Equipment"
+            android:icon="@drawable/equipment_drawer_icon"/>
+
+
+        <item
+            android:id="@+id/inventory_item"
+            android:title="Inventory"
+            android:icon="@drawable/inventory_drawer_icon"/>
+
+
+        <item android:id="@+id/tools_item"
+                android:title="Special Tool"
+            android:icon="@drawable/specialtools_drawer_icon"/>
+
+<!--        <item-->
+<!--        android:id="@+id/statistics_item"-->
+<!--        android:title="Statistic"-->
+<!--        android:icon="@drawable/statistics_drawer_icon"/>-->
+
+        <item
+            android:id="@+id/configuration_item"
+            android:title="Configuration"
+            android:icon="@drawable/applicationconfiguration_drawer_icon"/>
+
+
+
+    </group>
+
+
+</menu>

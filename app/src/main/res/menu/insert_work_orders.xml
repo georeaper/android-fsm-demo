@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/insert_workorder_download_pdf"
+        android:title="Download"
+        app:showAsAction="always"
+        app:actionLayout="@layout/insert_toolbar_workorder"/>
+
+
+    <item
+        android:id="@+id/insert_toolbar_save"
+        android:title="Save"
+        app:showAsAction="always"
+        app:actionLayout="@layout/insert_toolbar_save"
+        />
+</menu>

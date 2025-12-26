@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@color/white">
+        <ImageButton
+            android:id="@+id/notification_close_btn"
+            android:layout_width="24dp"
+            android:layout_height="wrap_content"
+            android:contentDescription="close notification"
+            android:src="@drawable/logout_arrow_left"
+            android:background="@color/white"
+            android:layout_margin="4dp"
+            android:layout_gravity="center"
+            />
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="9"
+            android:textSize="18sp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:text="Notifications"
+            android:layout_margin="4dp"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:id="@+id/deleteAll"
+            android:layout_height="wrap_content"
+            android:text="See all"
+            android:layout_margin="8dp"
+            android:padding="4dp"
+            android:layout_gravity="end|center"
+            android:textColor="@color/color_blue"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_corners"
+        android:backgroundTint="@color/background_secondary_lightB"
+        android:layout_gravity="center"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="16dp"
+        android:padding="2dp">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:layout_margin="2dp"
+            android:text="All"
+            android:textColor="@color/notification_text_secondary"
+
+            android:layout_weight="0.5"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/background_secondary_lightB"
+            android:text="Action needed"
+            android:textColor="@color/notification_text_helper"
+            android:layout_margin="2dp"
+            android:layout_weight="0.5"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewNotifications"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_secondary_lightB"
+
+        android:padding="8dp"
+        />
+
+
+
+</LinearLayout>

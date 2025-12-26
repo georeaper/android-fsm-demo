@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.ui.Settings.NotificationSettings">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Notification"
+                android:layout_marginBottom="16dp"/>
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:checked="false"
+                android:id="@+id/notification_switch_maintenanceDue"
+                android:text="Maintenance due Notification"
+
+                android:textSize="16sp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Days before the event"
+                android:layout_marginBottom="16dp"
+                android:layout_marginStart="15dp"
+
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="numberDecimal"
+                    android:id="@+id/notification_maintenanceDue"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp"
+                app:dividerThickness="2dp"
+                android:layout_marginBottom="16dp"/>
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:checked="false"
+                android:id="@+id/notification_switch_workOrderStatus"
+                android:text="Work Order Status Update"
+                android:layout_marginBottom="16dp"
+                android:textSize="16sp"/>
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp"
+                app:dividerThickness="2dp"
+                android:layout_marginBottom="16dp"/>
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:checked="false"
+                android:id="@+id/notification_switch_contractExpiry"
+                android:text="Contract Expiration"
+                android:layout_marginBottom="16dp"
+                android:textSize="16sp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Days before the event"
+                android:layout_marginBottom="16dp"
+                android:layout_marginStart="15dp"
+
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="numberDecimal"
+                    android:id="@+id/notification_contractExpiry"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp"
+                app:dividerThickness="2dp"/>
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:checked="false"
+                android:text="Equipment Downtime"
+                android:id="@+id/notification_switch_downtime"
+                android:layout_marginBottom="16dp"
+                android:textSize="16sp"/>
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp"
+                app:dividerThickness="2dp"
+                android:layout_marginBottom="16dp"/>
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:checked="false"
+                android:id="@+id/notification_switch_preventiveMaintenance"
+                android:text="Preventive Maintenance Reminders"
+                android:layout_marginBottom="16dp"
+                android:textSize="16sp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Days before the event"
+                android:layout_marginBottom="16dp"
+                android:layout_marginStart="15dp"
+
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="numberDecimal"
+                    android:id="@+id/notification_PreventiveMaintenanceReminders"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp"
+                app:dividerThickness="2dp"/>
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:checked="false"
+                android:text="Assignment Notification"
+                android:layout_marginBottom="16dp"
+                android:textSize="16sp"
+                android:id="@+id/notification_switch_assignment"/>
+
+        </LinearLayout>
+
+
+
+
+
+    </ScrollView>
+
+
+
+</FrameLayout>

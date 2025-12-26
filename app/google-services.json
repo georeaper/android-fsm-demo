@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "105304719108",
+    "project_id": "cmmsgkandroid",
+    "storage_bucket": "cmmsgkandroid.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:105304719108:android:4d95b1b82ce9186afe5a51",
+        "android_client_info": {
+          "package_name": "com.gkprojects.cmmsandroidapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "105304719108-du5muvbacnjnbrpivekj2vf5p0d9oekb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDelB3gc-yseiy2_5b_hPMdJ7WCp_z2DPA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "105304719108-du5muvbacnjnbrpivekj2vf5p0d9oekb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

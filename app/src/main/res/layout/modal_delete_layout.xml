@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round_corners"
+    android:backgroundTint="@color/modal_discard_background"
+    android:layout_gravity="center"
+    android:gravity="center">
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:contentDescription="closing_btn"
+        android:src="@drawable/appbar_cancel_insert"
+        android:backgroundTint="@color/modal_discard_background"
+        android:layout_margin="16dp"
+        android:padding="8dp"
+        android:id="@+id/modal_close_btn"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/discard_image_modal"
+        android:id="@+id/modal_delete_img"
+        android:layout_margin="16dp"
+        android:padding="8dp"/>
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/modal_message_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Do you want to delete this item ?"
+        android:textSize="20sp"
+        android:layout_margin="4dp"
+        android:padding="4dp"
+        android:textColor="@color/modal_text_color" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/modal_discard_btn_background"
+        android:text="Discard"
+        android:textColor="@android:color/white"
+        android:id="@+id/modal_delete_btn"
+        android:layout_margin="8dp"
+        android:padding="4dp"/>
+
+
+
+</LinearLayout>

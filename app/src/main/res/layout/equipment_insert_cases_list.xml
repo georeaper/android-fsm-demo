@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:orientation="horizontal"
+    android:layout_margin="5dp"
+    android:padding="3dp"
+    android:gravity="center">
+    <View
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:id="@+id/equipmentInsert_casesList_View"
+        android:background="@color/darkGreen"
+        android:layout_weight="0.01"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:id="@+id/equipmentInsert_casesList_TextInputLayout_ID"
+        android:hint="ID"
+        android:layout_weight="0.2">
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="2134567"
+            android:id="@+id/equipmentInsert_casesList_MaterialTextView_ID"
+            android:gravity="center"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:id="@+id/equipmentInsert_casesList_TextInputLayout_Title"
+        android:hint="Title"
+        android:layout_weight="0.5">
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/equipmentInsert_casesList_MaterialTextView_Title"
+            android:text="2134567"
+            android:gravity="center"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:id="@+id/equipmentInsert_casesList_TextInputLayout_Urgency"
+        android:hint="Urgency"
+        android:layout_weight="0.2">
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/equipmentInsert_casesList_MaterialTextView_Urgency"
+            android:text="2134567"
+            android:gravity="center"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>

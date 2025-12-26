@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ui.dashboardCustomer.DashboardCustomerFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/BackgroundElementsColor">
+
+        <TextView
+            android:id="@+id/tvDashboardGeneralInformationTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+
+            android:background="@color/BackgroundElementsColor"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="@string/contact_information"
+            android:textColor="@color/AppColor"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/ibDashboardGeneralInformationImageButton"
+            app:layout_constraintHorizontal_bias="0.134"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/ibDashboardGeneralInformationImageButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@color/BackgroundElementsColor"
+            android:src="@drawable/edit_icon_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginRight="5dp"
+            android:padding="3dp"/>
+
+
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/dividerFirst"
+
+            app:layout_constraintTop_toBottomOf="@+id/tvDashboardGeneralInformationTitle"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/customerNameLayoytDashboard"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dividerFirst"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+
+                android:src="@drawable/baseline_factory_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/layoutDashboardItemCustomer"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageButton"
+                app:layout_constraintStart_toEndOf="@+id/imageView2"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/textviewCustomerNameDashboardCustomer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:layout_marginStart="10dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="1dp"
+                    android:textSize="@dimen/textSizeDashboard"
+                    android:text="General"
+
+                    android:layout_weight="1"/>
+
+                <View
+                    android:padding="1dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/AppColor"
+                    />
+
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@color/BackgroundElementsColor"
+                android:scaleType="fitCenter"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/phoneLayoytDashboard"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/customerNameLayoytDashboard"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:id="@+id/imageViewPhone"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:tint="#285B8D"
+                android:src="@drawable/phone_customerlist"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="UseAppTint" />
+
+            <LinearLayout
+                android:id="@+id/layoutDashboardItemPhone"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageButtonPhone"
+                app:layout_constraintStart_toEndOf="@+id/imageViewPhone"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/textviewCustomerNameDashboardPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="1dp"
+                    android:textSize="@dimen/textSizeDashboard"
+                    android:text="General"
+                    android:layout_weight="1"/>
+
+                <View
+                    android:padding="1dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/AppColor"
+                    />
+
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/imageButtonPhone"
+                android:layout_width="40dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:padding="5dp"
+                android:layout_height="40dp"
+                android:background="@color/BackgroundElementsColor"
+                android:scaleType="centerCrop"
+                android:src="@drawable/phone_call"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/emailLayoytDashboard"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phoneLayoytDashboard"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:id="@+id/imageViewEmail"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:tint="#285B8D"
+                android:src="@drawable/email_customerlist"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="UseAppTint" />
+
+            <LinearLayout
+                android:id="@+id/layoutDashboardItemEmail"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageButtonEmail"
+                app:layout_constraintStart_toEndOf="@+id/imageViewEmail"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/textviewCustomerNameDashboardEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="1dp"
+                    android:textSize="@dimen/textSizeDashboard"
+                    android:text="General"
+                    android:layout_weight="1"/>
+
+                <View
+                    android:padding="1dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/AppColor"
+                    />
+
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/imageButtonEmail"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@color/BackgroundElementsColor"
+                android:scaleType="centerCrop"
+                android:src="@drawable/email_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:padding="1dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/addressLayoutDashboard"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailLayoytDashboard"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:id="@+id/imageViewAddress"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:tint="#285B8D"
+                android:src="@drawable/location_customerlistv2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="UseAppTint" />
+
+            <LinearLayout
+                android:id="@+id/layoutDashboardItemAddress"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageButtonAddress"
+                app:layout_constraintStart_toEndOf="@+id/imageViewAddress"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/textviewCustomerNameDashboardAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="1dp"
+                    android:textSize="@dimen/textSizeDashboard"
+                    android:text="General"
+                    android:layout_weight="1"/>
+
+                <View
+                    android:padding="1dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/AppColor"
+                    />
+
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/imageButtonAddress"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@color/BackgroundElementsColor"
+                android:scaleType="centerCrop"
+                android:src="@drawable/maps_location_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginEnd="5dp"
+                android:padding="1dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:id="@+id/constrainProductsID"
+        app:layout_constraintTop_toBottomOf="@+id/addressLayoutDashboard">
+
+
+        <TextView
+            android:id="@+id/textviewAssetDashboard"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="120dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:text="Assets"
+            android:textColor="@color/AppColor"
+            app:layout_constraintHorizontal_bias="0.116"
+            app:layout_constraintLeft_toLeftOf="@id/constrainProductsID"
+            app:layout_constraintRight_toRightOf="@+id/constrainProductsID"
+            app:layout_constraintTop_toTopOf="@+id/constrainProductsID" />
+
+        <ImageButton
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/imageDashboardButonAssets"
+            android:background="@color/BackgroundElementsColor"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/more_vertical_icon"
+            app:layout_constraintEnd_toEndOf="@id/constrainProductsID"
+
+            app:layout_constraintTop_toTopOf="@id/constrainProductsID"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_customerdashboard_asset"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/recyclerview_styled"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textviewAssetDashboard"
+            tools:listitem="@layout/dashboard_customer_list_asset"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/constrainWorkOrdersID"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/constrainProductsID">
+
+
+            <TextView
+                android:id="@+id/textviewWorkOrderDashboard"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="120dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:text="Work Orders"
+                android:textColor="@color/AppColor"
+                app:layout_constraintHorizontal_bias="0.116"
+                app:layout_constraintLeft_toLeftOf="@id/constrainWorkOrdersID"
+                app:layout_constraintRight_toRightOf="@+id/constrainWorkOrdersID"
+                app:layout_constraintTop_toTopOf="@+id/constrainWorkOrdersID" />
+
+            <ImageButton
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/imageDashboardButtonWorkOrders"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/BackgroundElementsColor"
+                android:src="@drawable/more_vertical_icon"
+                app:layout_constraintEnd_toEndOf="@id/constrainWorkOrdersID"
+
+                app:layout_constraintTop_toTopOf="@id/constrainWorkOrdersID"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_customerdashboard_WorkOrders"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/recyclerview_styled"
+                android:layout_marginTop="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textviewWorkOrderDashboard"
+                tools:listitem="@layout/dashboard_customer_list_asset"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/constrainContractsID"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/constrainWorkOrdersID">
+
+
+            <TextView
+                android:id="@+id/textviewContractsDashboard"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="120dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:text="Contracts"
+                android:textColor="@color/AppColor"
+                app:layout_constraintHorizontal_bias="0.116"
+                app:layout_constraintLeft_toLeftOf="@id/constrainContractsID"
+                app:layout_constraintRight_toRightOf="@+id/constrainContractsID"
+                app:layout_constraintTop_toTopOf="@+id/constrainContractsID" />
+
+            <ImageButton
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/imageDashboardButonContracts"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/BackgroundElementsColor"
+                android:src="@drawable/more_vertical_icon"
+                app:layout_constraintEnd_toEndOf="@id/constrainContractsID"
+
+                app:layout_constraintTop_toTopOf="@id/constrainContractsID"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_customerdashboard_Contracts"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/recyclerview_styled"
+                android:layout_marginTop="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textviewContractsDashboard"
+                tools:listitem="@layout/dashboard_customer_list_asset"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/constrainTechnicalCasesID"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/constrainContractsID">
+
+
+            <TextView
+                android:id="@+id/textviewTechnicalCasesDashboard"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="120dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:text="Technical Cases"
+                android:textColor="@color/AppColor"
+                app:layout_constraintHorizontal_bias="0.116"
+                app:layout_constraintLeft_toLeftOf="@id/constrainTechnicalCasesID"
+                app:layout_constraintRight_toRightOf="@+id/constrainTechnicalCasesID"
+                app:layout_constraintTop_toTopOf="@+id/constrainTechnicalCasesID" />
+
+            <ImageButton
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/imageDashboardButonTechnicalCases"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/BackgroundElementsColor"
+                android:src="@drawable/more_vertical_icon"
+                app:layout_constraintEnd_toEndOf="@id/constrainTechnicalCasesID"
+
+                app:layout_constraintTop_toTopOf="@id/constrainTechnicalCasesID"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_customerdashboard_TechnicalCases"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/recyclerview_styled"
+                android:layout_marginTop="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textviewTechnicalCasesDashboard"
+                tools:listitem="@layout/dashboard_customer_list_asset"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/constrainNotesID"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/constrainTechnicalCasesID">
+
+
+            <TextView
+                android:id="@+id/textviewNotesDashboard"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="120dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textSize="16sp"
+
+                android:text="Notes"
+                android:visibility="invisible"
+                android:textColor="@color/AppColor"
+                app:layout_constraintHorizontal_bias="0.116"
+                app:layout_constraintLeft_toLeftOf="@id/constrainNotesID"
+                app:layout_constraintRight_toRightOf="@+id/constrainNotesID"
+                app:layout_constraintTop_toTopOf="@+id/constrainNotesID" />
+
+            <ImageButton
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/imageDashboardButonNotes"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:visibility="invisible"
+                android:background="@color/BackgroundElementsColor"
+                android:src="@drawable/more_vertical_icon"
+                app:layout_constraintEnd_toEndOf="@id/constrainNotesID"
+
+                app:layout_constraintTop_toTopOf="@id/constrainNotesID"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_customerdashboard_Notes"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:visibility="invisible"
+                android:background="@drawable/recyclerview_styled"
+                android:layout_marginTop="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textviewNotesDashboard"
+                tools:listitem="@layout/dashboard_customer_list_asset"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </ScrollView>
+
+
+</FrameLayout>

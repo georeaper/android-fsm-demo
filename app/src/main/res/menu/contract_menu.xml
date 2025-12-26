@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <item android:id="@+id/menu_contract_back"
+        android:title="Sync"
+        app:showAsAction="always"
+        android:icon="@drawable/back_svgrepo_com"/>
+    <item android:id="@+id/menu_contract_copy"
+        android:title="Copy"
+        app:showAsAction="always"
+        android:icon="@drawable/copy_svgrepo_com"/>
+
+    <item android:id="@+id/menu_contract_execute"
+        android:title="Execute"
+        app:showAsAction="always"
+        android:icon="@drawable/add_task_list_svgrepo_com"/>
+    <item android:id="@+id/menu_contract_delete"
+        android:title="Sync"
+        app:showAsAction="always"
+        android:icon="@drawable/trash_bin_trash_svgrepo_com"/>
+
+    <item android:id="@+id/menu_contract_save"
+        android:title="Save"
+        app:showAsAction="always"
+        android:icon="@drawable/document_add_svgrepo_com"
+        />
+
+</menu>

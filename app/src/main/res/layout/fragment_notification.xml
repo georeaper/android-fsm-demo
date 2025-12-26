@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/background_primary_lightB">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
+                <com.google.android.material.textview.MaterialTextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:text="Notification System"
+                    android:textStyle="bold"
+                    android:padding="4dp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:layout_marginEnd="2dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:id="@+id/notification_block_customer">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:orientation="vertical">
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/notification_system_customer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:text="Customer alert"
+                        android:textStyle="bold"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="2dp"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="8dp"
+                        />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/notification_system_customer_helper"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="Customer notification basic Crud"
+                        android:textColor="@color/color_grey"
+                        android:paddingBottom="4dp"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="8dp"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:gravity="center" >
+
+                    <ImageButton
+                        android:id="@+id/notification_system_customer_btn"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+
+                        android:contentDescription="TODO"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/navigation_list_right"/>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:dividerThickness="2dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:layout_marginEnd="2dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:id="@+id/notification_block_equipment">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:orientation="vertical">
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/notification_system_equipment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:text="Equipment alert"
+                        android:textStyle="bold"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="2dp"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="8dp"
+                        />
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/notification_system_equipment_helpder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="Equipment"
+                        android:textColor="@color/color_grey"
+                        android:paddingBottom="4dp"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="8dp"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:gravity="center" >
+
+                    <ImageButton
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:id="@+id/notification_system_equipment_btn"
+
+                        android:contentDescription="TODO"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/navigation_list_right"/>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:dividerThickness="2dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:layout_marginEnd="2dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:id="@+id/notification_block_technicalCase">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:orientation="vertical">
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/notification_system_technicalCase"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:text="Technical case"
+                        android:textStyle="bold"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="2dp"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="8dp"
+                        />
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/notification_system_technicalCase_helper"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="Technical case"
+                        android:textColor="@color/color_grey"
+                        android:paddingBottom="4dp"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="8dp"
+                        />
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:gravity="center" >
+
+                    <ImageButton
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:id="@+id/notification_system_technicalCase_btn"
+
+                        android:contentDescription="TODO"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/navigation_list_right"/>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:dividerThickness="2dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:layout_marginEnd="2dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:id="@+id/notification_block_contract">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:orientation="vertical"
+                    >
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/notification_system_contract"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:text="Contract"
+                        android:textStyle="bold"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="2dp"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="8dp"
+                        />
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/notification_system_contract_helper"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="Alert user for notifications "
+                        android:textColor="@color/color_grey"
+                        android:paddingBottom="4dp"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="8dp"
+                        />
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:gravity="center" >
+
+                    <ImageButton
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:id="@+id/notification_system_contract_btn"
+
+                        android:contentDescription="TODO"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/navigation_list_right"/>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:dividerThickness="2dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:layout_marginEnd="2dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:id="@+id/notification_block_tasks">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:orientation="vertical"
+                >
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/notification_system_tasks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="Tasks"
+                    android:textStyle="bold"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="2dp"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="8dp"
+                    />
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/notification_system_tasks_helper"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="Alert user for notifications "
+                    android:textColor="@color/color_grey"
+                    android:paddingBottom="4dp"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="8dp"
+                    />
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:gravity="center" >
+
+                <ImageButton
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:id="@+id/notification_system_tasks_btn"
+
+                    android:contentDescription="TODO"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/navigation_list_right"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:dividerThickness="2dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:layout_marginEnd="2dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:id="@+id/notification_block_WorkOrder">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:orientation="vertical"
+                >
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/notification_system_workOrder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="Work order"
+                    android:textStyle="bold"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="2dp"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="8dp"
+                    />
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/notification_system_workOrder_helper"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="Alert user for notifications "
+                    android:textColor="@color/color_grey"
+                    android:paddingBottom="4dp"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="8dp"
+                    />
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:gravity="center" >
+
+                <ImageButton
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:id="@+id/notification_system_workOrder_btn"
+
+                    android:contentDescription="TODO"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/navigation_list_right"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:dividerThickness="2dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:layout_marginEnd="2dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:id="@+id/notification_block_SpecialTools">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:orientation="vertical"
+                >
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/notification_system_SpecialTools"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="Special tools"
+                    android:textStyle="bold"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="2dp"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="8dp"
+                    />
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/notification_system_specialTools_helper"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="Alert user for notifications "
+                    android:textColor="@color/color_grey"
+                    android:paddingBottom="4dp"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="8dp"
+                    />
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:gravity="center" >
+
+                <ImageButton
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:id="@+id/notification_system_specialTools_btn"
+
+                    android:contentDescription="TODO"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/navigation_list_right"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:dividerThickness="2dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"/>
+
+        </LinearLayout>
+
+
+
+</FrameLayout>

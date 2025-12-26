@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    android:weightSum="20"
+    android:layout_margin="5dp"
+    android:background="@drawable/bordered_rectangle">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Part Number"
+            android:layout_margin="8dp"
+            android:layout_weight="9.5"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+            app:boxBackgroundMode="none">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:inputType="none"
+                android:padding="8dp"
+                android:text="Read-only text"
+                android:id="@+id/fieldReport_spareparts_recyclerview_row_partnumber"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Description"
+            android:layout_margin="8dp"
+            android:layout_weight="9.5"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+            app:boxBackgroundMode="none"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:inputType="none"
+                android:padding="8dp"
+                android:text="Read-only text"
+                android:id="@+id/fieldReport_spareparts_recyclerview_row_description"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+

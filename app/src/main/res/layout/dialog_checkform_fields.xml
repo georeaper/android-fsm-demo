@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingDefaultResource"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/importButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Import from file"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Description"
+        android:layout_marginBottom="16dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/dialogCheckFormsFieldsDescription"            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Expected Values"
+        android:layout_marginBottom="16dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/dialogCheckFormsFieldsExpectedValues"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+
+    android:layout_marginBottom="16dp"
+    >
+
+    <com.google.android.material.textfield.TextInputLayout
+
+    android:layout_width="0dp"
+    android:layout_height="50dp"
+    android:hint="Value Type"
+    android:layout_weight="1"
+
+    android:layout_gravity="center">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/dialogCheckFormsFieldsTypeValues"/>
+
+</com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="Add Values"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/dialogCheckFormsFieldsbtn"
+        android:layout_weight="0.5"
+        />
+</LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/dialogCheckFormsFieldsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        />
+
+
+</LinearLayout>

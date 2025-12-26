@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="5dp"
+    android:padding="16dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/titleTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:text="Notification Title"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/notification_text_title"
+            android:layout_weight="0.8"
+            />
+        <View
+            android:id="@+id/badgeView"
+            android:layout_margin="2dp"
+            android:padding="2dp"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_gravity="center"
+            android:background="@drawable/notification_badge_shape_item"/>
+
+    </LinearLayout>
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/notification_textview_helper"
+        android:text="Succeed"
+        android:textColor="@color/notification_text_helper"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/descriptionTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/notification_text_secondary"
+        android:text="Notification Description"
+        android:layout_marginTop="5dp"
+        android:paddingStart="5dp"
+        android:lines="2"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/timeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Timestamp"
+        android:textSize="12sp"
+        android:layout_gravity="start"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/notification_date" />
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:dividerThickness="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"/>
+</LinearLayout>

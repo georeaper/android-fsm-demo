@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_margin="4dp"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="8dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.25"
+            android:orientation="horizontal"
+            android:background="@color/UrgentCasesHomeView"
+            >
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_ticketId"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="CaseID : TC-133"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_weight="0.7"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_priority"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="High"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@color/red"
+                android:gravity="center"
+
+                android:layout_weight="0.3"/>
+
+
+        </LinearLayout>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_date_start"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textColor="@color/text_color_headers_KPI"
+            android:textSize="16sp"
+            android:text="Reported : 25/01/2022 17:35"
+            android:padding="10dp"
+            android:layout_weight="0.25"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_customerName"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textColor="@color/text_color_headers_KPI"
+            android:textSize="16sp"
+            android:text="Customer : Metropolitan"
+            android:padding="10dp"
+            android:layout_weight="0.25"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_title_home"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textColor="@color/text_color_headers_KPI"
+            android:textSize="16sp"
+            android:text="Title : Compressor Leakage"
+            android:padding="10dp"
+            android:layout_weight="0.25"/>
+
+
+
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>
