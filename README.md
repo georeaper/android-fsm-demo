@@ -95,14 +95,14 @@ RecyclerView
 
 LiveData / StateFlow (where applicable)
 ```
-##How to Run
-```text
-Clone the repository:
+## How to Run
 
+### 1. Clone the repository:
+```text
 git clone https://github.com/georeaper/android-fsm-demo.git
 ```
 
-Open the project in Android Studio
+### 2. Open the project in Android Studio
 
 Build and run on an emulator or physical device
 
