@@ -50,7 +50,7 @@ The project follows **MVVM + Clean Architecture** principles.
 
 ### Package Structure
 
-
+```text
 data/
  ├─ local/              → Room entities, DAOs, database
  ├─ repositoryImpl/     → Data access implementations
@@ -66,7 +66,8 @@ presentation/
  ├─ ui/                 → Feature screens (Customer, Work Order, Equipment)
  ├─ adapter/            → RecyclerView, dropdown, and pager adapters
  ├─ common/             → Dialogs, modals, shared UI components
- └─ viewmodel/          → ViewModels acting as the bridge between UI and data layers
+ └─ viewmodel/          → ViewModels acting as the bridge between UI and data layers 
+```
 
 ##Architectural Highlights
 
