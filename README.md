@@ -69,7 +69,7 @@ presentation/
  └─ viewmodel/          → ViewModels acting as the bridge between UI and data layers 
 ```
 
-##Architectural Highlights
+## Architectural Highlights
 
 Clear separation of concerns
 
